@@ -1,0 +1,19 @@
+
+name: CI/CD with Push and Scheduled Actions
+
+on:
+  push:
+    branches: [main]
+
+on:
+  schedule:
+    -cron:‘30 7 * * 5’# every Friday 06:00 UTC
+
+on:
+  schedule:
+    -cron: ‘* * * * *’
+
+on:
+  label:
+    types:
+      -created
